@@ -32,6 +32,8 @@ I have represented the Arduino TX pin as a switch to +5V/GND just to think about
 # My "cheating" adaptor circuit for Arduino TX to computer RX
 I noticed that in practice my computer considers 0V to be equivalent to a negative voltage, so we can simply invert the signal (5V to 0V / 0V to 5V) and it works perfectly in my case! I say this is "cheating" because the signal does not conform to the RS232 standard, which requires less than -3V for the low value (between -3V and +3V the behavior is not specified).
 
+Note that this "cheating" version does not heat, does not require a 9V battery, and requires only one NPN transistor.
+
 This is the result (top = input signal from Arduino / bottom = output signal from my circuit to the computer):
 ![Input and output signals measured](/benchmarks/Arduino%20to%20RS232/9600%20bauds%20with%20custom%20cheating.jpg?raw=true)
 
@@ -40,9 +42,7 @@ This is actually cleaner than with a MAX232A, which gives this output (top = inp
 Setup used for this measure is shown below.
 
 # Alternative: Use a decdicated IC like MAX232
-The most obvious way to do that is to use an IC designed specifically for that.
-
-MAX232 is an IC which allows to convert from/to Arduino RX/TX to a computer serial port (RS232). With this circuit, you don't need a 9V battery like with my homemade circuit above (unless you use the "cheating" version). Here is the setup with a MAX232A. All capacitors are 0.1 µF here, as required by the MAX232A data sheet. If you have another MAX232 variant, the capcitors values might be different, check it in the data sheet.
+The standard way to connect a serial port (RS232) to an Arduino (or any 0V/5V based serial interface) is to use a dedicated IC like MAX232A. With this IC, you don't need a 9V battery like with my homemade circuit above (unless you use the "cheating" version). Here is the setup with a MAX232A. All capacitors are 0.1 µF here, as required by the MAX232A data sheet. If you have another MAX232 variant, the capcitors values might be different, check it in the data sheet.
 
 ![Circuit wiring with MAX232 - diagram](/circuit/MAX232_diagram.jpg?raw=true)
 
