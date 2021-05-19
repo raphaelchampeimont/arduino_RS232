@@ -30,7 +30,7 @@ Diagram:
 I have represented the Arduino TX pin as a switch to +5V/GND just to think about the circuit, but the actual hardware inside is probably different.
 
 # My "cheating" adaptor circuit for Arduino TX to computer RX
-I noticed that in practice my computer considers 0V to be equivalent to a negative voltage, so we can simply invert the signal (5V to 0V / 0V to 5V) and it works perfectly in my case! I say this is "cheating" because the signal does not conform to the RS232 standard, which requires <-3V for the low value.
+I noticed that in practice my computer considers 0V to be equivalent to a negative voltage, so we can simply invert the signal (5V to 0V / 0V to 5V) and it works perfectly in my case! I say this is "cheating" because the signal does not conform to the RS232 standard, which requires less than -3V for the low value (between -3V and +3V the behavior is not specified).
 
 This is the result (top = input signal from Arduino / bottom = output signal from my circuit to the computer):
 ![Input and output signals measured](/benchmarks/Arduino%20to%20RS232/9600%20bauds%20with%20custom%20cheating.jpg?raw=true)
