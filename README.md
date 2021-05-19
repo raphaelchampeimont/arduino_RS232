@@ -10,7 +10,7 @@ The goal of these circuit is to convert voltages between the two incompatible st
 I present my own adapter circuit and compare them to the "standard" alternative which is to use a dedicated IC like MAX232A for instance (see bottom of this page for how to use this IC).
 
 # My custom adaptor circuit: computer TX to Arduino RX
-This direction is quite easy, as we just need 
+This direction is quite easy and requires little components. All you need is a few resistors and PNP transistors.
 
 Diagram:
 ![Circuit diagram](/circuit/diagram.jpg?raw=true)
