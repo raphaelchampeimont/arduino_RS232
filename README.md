@@ -36,7 +36,7 @@ This is the result (top = input signal from Arduino / bottom = output signal fro
 ![Input and output signals measured](/benchmarks/Arduino%20to%20RS232/9600%20bauds%20with%20custom%20cheating.jpg?raw=true)
 
 This is actually cleaner than with a MAX232A, which gives this output (top = input signal from Arduino / bottom = output signal from MAX232A to the computer).
-![Input and output signals measured](/benchmarks/Arduino%20to%20RS232/9600%20bauds%20with%20custom%20cheating.jpg?raw=true)
+![Input and output signals measured](/benchmarks/Arduino%20to%20RS232/9600%20bauds%20with%20MAX232A.jpg?raw=true)
 Setup used for this measure is shown below.
 
 # Alternative: Use a decdicated IC like MAX232
@@ -46,4 +46,4 @@ MAX232 is an IC which allows to convert from/to Arduino RX/TX to a computer seri
 
 ![Circuit wiring with MAX232 - diagram](/circuit/MAX232_diagram.jpg?raw=true)
 
-![Circuit wiring with MAX232 - photo](/circuit/MAX232_photo.jpg?raw=true)
+
