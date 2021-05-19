@@ -33,6 +33,7 @@ I have represented the Arduino TX pin as a switch to +5V/GND just to think about
 I noticed that in practice my computer considers 0V to be equivalent to a negative voltage, so we can simply invert the signal (5V to 0V / 0V to 5V) and it works perfectly in my case! I say this is "cheating" because the signal does not conform to the RS232 standard, which requires less than -3V for the low value (between -3V and +3V the behavior is not specified).
 
 Note that this "cheating" version does not heat, does not require a 9V battery, and requires only one NPN transistor.
+![Circuit diagram](/circuit/diagram_TX_cheating.jpg?raw=true)
 
 This is the result (top = input signal from Arduino / bottom = output signal from my circuit to the computer):
 ![Input and output signals measured](/benchmarks/Arduino%20to%20RS232/9600%20bauds%20with%20custom%20cheating.jpg?raw=true)
