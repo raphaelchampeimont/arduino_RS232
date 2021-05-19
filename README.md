@@ -3,7 +3,7 @@ For the challenge, I wanted to send data from my computer's real serial port (RS
 
 You can watch my YouTube video where I show the circuit working: https://www.youtube.com/watch?v=u4Crk8dcw9A
 
-The goal of these circuit is to convert voltages between the two incompatible standards:
+The goal of these circuits is to convert voltages between the two incompatible standards:
 * negative voltage in RS232 (any value from −15 to −3 V) <=> 5V in Arduino
 * positive voltage in RS232 (any value from +3 to +15 V) <=> 0V in Arduino
 
