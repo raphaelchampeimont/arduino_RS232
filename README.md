@@ -3,9 +3,14 @@ For the challenge, I wanted to send data from my computer's real serial port (RS
 
 You can watch my YouTube video where I show the circuit working: https://www.youtube.com/watch?v=u4Crk8dcw9A
 
-This adaptor circuit translates -12V (logical 1 in RS232) to 5V and +12V (logical 0) to 0V.
+The goal of these circuit is to convert voltages between the two incompatible standards:
+* negative voltage in RS232 (any value from −15 to −3 V) <=> 5V in Arduino
+* positive voltage in RS232 (any value from +3 to +15 V) <=> 0V in Arduino
+
+I present my own adapter circuit and compare them to the "standard" alternative which is to use a dedicated IC like MAX232A for instance (see bottom of this page for how to use this IC).
 
 # My custom adaptor circuit: computer TX to Arduino RX
+This direction is quite easy, as we just need 
 
 Diagram:
 ![Circuit diagram](/circuit/diagram.jpg?raw=true)
