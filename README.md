@@ -16,8 +16,8 @@ Diagram:
 ![Circuit diagram](/circuit/diagram.jpg?raw=true)
 I have represented the Arduino RX pin as a diode and resistor just to think about the circuit, but the actual hardware inside is probably different.
 
-Photo:
-![Circuit photo](/circuit/photo_annotated.jpg?raw=true)
+Here is what the signal looks like (top = input signal from the computer / bottom = output signal from my circuit to the Arduino).
+![Input and output signals measured](/benchmarks/RS232%20to%20Arduino/115200%20bauds%20with%20custom.jpg?raw=true)
 
 # My custom adaptor circuit: Arduino TX to computer RX
 Altough it is not used by this program, I also created the circuit to perform serial communication in the reverse direction, ie. from Arduino TX pin to computer RS232 RX pin.
