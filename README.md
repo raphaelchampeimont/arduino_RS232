@@ -1,16 +1,6 @@
-# arduino_RS232
-How to connect an Arduino to a real serial port (RS232).
+# How to connect an Arduino to a real serial port (RS232)
 
-# Variant 1: Real serial port (RS232) with a MAX232 IC
-The most obvious way to do that is to use an IC designed specifically for that.
-
-MAX232 is an IC which allows to convert from/to Arduino RX/TX to a computer serial port (RS232). With this circuit, you don't need a 9V battery like with my homemade circuit above. Here is the setup with a MAX232A. All capacitors are 0.1 µF here, as required by the MAX232A data sheet. If you have another MAX232 variant, the capcitors values might be different, check it in the data sheet.
-
-![Circuit wiring with MAX232 - diagram](/circuit/MAX232_diagram.jpg?raw=true)
-
-![Circuit wiring with MAX232 - photo](/circuit/MAX232_photo.jpg?raw=true)
-
-# Variant 2: Real serial port (RS232) with custom adapter circuit
+# My custom adaptor circuit
 ## Computer TX to Arduino RX
 For the challenge, I wanted to send data from my computer's real serial port (RS232 9-pin connector). For that, I created an adaptor circuit because the voltages on a computer serial port are different from what the Arduino expects. Don't connect the computer TX pin to the Arduino RX pin directly, it would fry your Arduino according to the documentation (https://www.arduino.cc/reference/en/language/functions/communication/serial/). 
 
@@ -37,3 +27,12 @@ I have represented the Arduino TX pin as a switch to +5V/GND just to think about
 Photo:
 ![Circuit photo](/circuit/photo_annotated_TX.jpg?raw=true)
 (The GND of the RS232 port is connected to the Arduino GND off camera)
+
+# Alternative: Use a decdicated IC like MAX232
+The most obvious way to do that is to use an IC designed specifically for that.
+
+MAX232 is an IC which allows to convert from/to Arduino RX/TX to a computer serial port (RS232). With this circuit, you don't need a 9V battery like with my homemade circuit above. Here is the setup with a MAX232A. All capacitors are 0.1 µF here, as required by the MAX232A data sheet. If you have another MAX232 variant, the capcitors values might be different, check it in the data sheet.
+
+![Circuit wiring with MAX232 - diagram](/circuit/MAX232_diagram.jpg?raw=true)
+
+![Circuit wiring with MAX232 - photo](/circuit/MAX232_photo.jpg?raw=true)
