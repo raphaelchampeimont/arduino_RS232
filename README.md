@@ -16,6 +16,9 @@ Diagram:
 ![Circuit diagram](/circuit/diagram.jpg?raw=true)
 I have represented the Arduino RX pin as a diode and resistor just to think about the circuit, but the actual hardware inside is probably different.
 
+What is looks like:
+![Circuit photo](/circuit/photo_annotated.jpg?raw=true)
+
 Here is what the signal looks like (top = input signal from the computer / bottom = output signal from my circuit to the Arduino). Transfer rate was 115200 bauds.
 ![Input and output signals measured](/benchmarks/RS232%20to%20Arduino/115200%20bauds%20with%20custom.jpg?raw=true)
 The output looks very similar to what you would get with a MAX232A IC (look at the files in the repo if you want to see the other screenshot).
@@ -28,6 +31,9 @@ What makes it difficult is the fact that you need to provide negative voltage (w
 Diagram:
 ![Circuit diagram](/circuit/diagram_TX.jpg?raw=true)
 I have represented the Arduino TX pin as a switch to +5V/GND just to think about the circuit, but the actual hardware inside is probably different.
+
+What is looks like:
+![Circuit photo](/circuit/photo_annotated_TX.jpg?raw=true)
 
 # My "cheating" adaptor circuit for Arduino TX to computer RX
 I noticed that in practice my computer considers 0V to be equivalent to a negative voltage, so we can simply invert the signal (5V to 0V / 0V to 5V) and it works perfectly in my case! I say this is "cheating" because the signal does not conform to the RS232 standard, which requires less than -3V for the low value (between -3V and +3V the behavior is not specified).
