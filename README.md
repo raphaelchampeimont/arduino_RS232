@@ -47,4 +47,4 @@ The standard way to connect a serial port (RS232) to an Arduino (or any 0V/5V ba
 
 ![Circuit wiring with MAX232 - diagram](/circuit/MAX232_diagram.jpg?raw=true)
 
-
+![Circuit wiring with MAX232 - photo](/circuit/MAX232_photo.jpg?raw=true)
